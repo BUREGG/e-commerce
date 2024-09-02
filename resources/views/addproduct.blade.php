@@ -26,7 +26,7 @@
                 <div class="card">
                     <div class="card-header">Dodaj ogłoszenie</div>
                     <div class="card-body">
-                        <form action="{{ route('addproduct') }}" method="POST" enctype="multipart/form-data">
+                        <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="mb-3">
                                 <label for="name" class="form-label">Tytuł</label>
