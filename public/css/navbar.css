@@ -1,0 +1,31 @@
+/* public/css/styles.css */
+.navbar-custom {
+    background-color: #343a40; /* Dark background for the navbar */
+}
+.navbar-custom .nav-link {
+    color: #f8f9fa; /* Light text color for better contrast */
+}
+.navbar-custom .nav-link.active, .navbar-custom .nav-link:hover {
+    color: #0d6efd; /* Highlight color for active and hover states */
+}
+.navbar-custom .navbar-brand {
+    color: #f8f9fa;
+}
+.navbar-custom .navbar-brand:hover {
+    color: #0d6efd;
+}
+.navbar-custom .navbar-text {
+    color: #f8f9fa;
+}
+
+/* Centering the logout button */
+.navbar-custom .logout-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+}
+.navbar-custom .navbar-nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
