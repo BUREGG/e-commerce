@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductStoreRequestForm;
 use App\Http\Resources\BaseResource;
+use App\Models\Product;
 use Illuminate\Http\Request;
+use Spatie\QueryBuilder\QueryBuilder;
 
 class ProductController extends Controller
 {
@@ -13,7 +15,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        //
+        $products = Product::with('images')->get();
+        return view('welcome', ['products' => $products]);
     }
 
     /**

@@ -17,7 +17,7 @@ class ProductStoreRequestForm extends FormRequest
     {
         $rules = [
             'name' => 'required|string|max:255',
-            'description' => 'required|string|max:250',
+            'description' => 'required|string|max:5000',
             'price' => 'required|numeric',
             'files.*.image' => 'required|file|mimes:jpeg,png,jpg,gif|max:1024'
 		];
