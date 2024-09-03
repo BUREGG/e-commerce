@@ -1,0 +1,63 @@
+/* ogólne style dla ciała strony */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* kontener produktu */
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* tytuł produktu */
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* sekcja z obrazami produktu */
+.product-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* zdjęcia produktu */
+.product-images img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* cena produktu */
+.price {
+    font-size: 1.75rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* opis produktu */
+.description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* responsywność */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .product-images {
+        flex-direction: column;
+    }
+}

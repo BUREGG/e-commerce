@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProductStoreRequestForm;
+use App\Http\Requests\ProductUpdateRequestForm;
 use App\Http\Resources\BaseResource;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -39,31 +40,34 @@ class ProductController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show()
+    public function show(Product $product)
     {
+        return view('productdetails', ['product' => $product]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(Product $product)
     {
-        //
+        return view('productedit', ['product' => $product]);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(ProductUpdateRequestForm $form, Product $product)
     {
-        //
+        $product = $form->save();
+        return new BaseResource($product);
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Product $product)
     {
-        //
+        $product->delete();
+        return redirect()->back();    
     }
 }
