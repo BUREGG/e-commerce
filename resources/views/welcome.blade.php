@@ -24,7 +24,7 @@
                             <p class="card-text text-muted">{{ Str::limit(strip_tags($product->description), 100) }}</p>
                             <div class="mt-auto text-center">
                                 <div class="d-flex justify-content-center flex-wrap gap-2">
-                                    <a href="#" class="btn btn-primary">Dodaj do koszyka</a>
+                                    <a href="{{ route('cart.store', ['product' => $product ]) }}" class="btn btn-primary">Dodaj do koszyka</a>
                                     @role('admin')
                                         <a href="{{ route('product.edit', ['product' => $product ]) }}" class="btn btn-warning">Edytuj</a>
                                         <form action="{{ route('product.destroy', ['product' => $product ]) }}" method="POST" class="d-inline-block">
