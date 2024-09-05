@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CartPositionController;
+use App\Http\Controllers\InpostController;
+use App\Http\Controllers\PayController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Models\CartPosition;
@@ -40,7 +42,9 @@ Route::middleware('auth')->group(function () {
     Route::get('/cart', [CartController::class, 'show'])->name('cart.show');
     Route::patch('/cart/{cartPosition}', [CartPositionController::class, 'update'])->name('cart.update');
     Route::delete('/cart/{cartPosition}', [CartPositionController::class, 'destroy'])->name('cart.destroy');
-
+    Route::get('/delivery', [InpostController::class, 'show'])->name('inpost.show');
+    Route::post('/save-point', [InpostController::class, 'store'])->name('inpost.store');
+    Route::get('/pay', [PayController::class, 'show'])->name('pay.show');
 });
 
 require __DIR__.'/auth.php';

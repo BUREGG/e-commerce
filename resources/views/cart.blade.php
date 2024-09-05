@@ -63,6 +63,7 @@
                     <div class="summary-box mt-4 p-3 bg-light border rounded shadow-sm">
                         <h3>Podsumowanie</h3>
                         <p><strong>Łączny koszt:</strong> {{ $totalPrice }} PLN</p>
+                        <a href="{{ route('inpost.show') }}" class="btn btn-primary mt-3">Przejdź do dostawy</a>
                     </div>
                 </div>
             </div>
@@ -73,7 +74,5 @@
                 </div>
             </div>
         @endif
-
-        {{-- <a href="{{ route('checkout') }}" class="btn btn-primary">Przejdź do kasy</a> --}}
     </div>
 @endsection
