@@ -20,4 +20,7 @@
         </div>
     </div>
 </div>
+<div class="d-flex justify-content-center flex-wrap gap-2">
+    <a href="{{ route('cart.store', ['product' => $product ]) }}" class="btn btn-primary">Dodaj do koszyka</a>
+</div>
 @endsection
