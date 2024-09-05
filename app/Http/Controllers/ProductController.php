@@ -31,10 +31,10 @@ class ProductController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(ProductStoreRequestForm $form): BaseResource
+    public function store(ProductStoreRequestForm $form)
     {
         $product = $form->save();
-        return new BaseResource($product);
+        return redirect()->route('welcome');    
     }
 
     /**

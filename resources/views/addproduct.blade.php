@@ -24,7 +24,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
-                    <div class="card-header">Dodaj ogłoszenie</div>
+                    <div class="card-header">Dodaj produkt</div>
                     <div class="card-body">
                         <form action="{{ route('product.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
@@ -52,7 +52,7 @@
                                 <input type="file" accept=".jpg, .jpeg, .png" class="form-control" id="image"
                                     name="image[]" multiple>
                             </div>
-                            <button type="submit" class="btn btn-primary">Dodaj ogłoszenie</button>
+                            <button type="submit" class="btn btn-primary">Dodaj produkt</button>
 
                         </form>
                     </div>
@@ -60,8 +60,4 @@
             </div>
         </div>
     </div>
-
-    <?php
-    
-    ?>
 @endsection

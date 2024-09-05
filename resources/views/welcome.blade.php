@@ -12,14 +12,14 @@
                         @if ($product->images->isNotEmpty())
                             <img class="card-img-top" src="{{ asset('storage/images/' . $product->images->first()->image) }}"
                                 alt="{{ $product->name }}" width="170px" height="270px"
-                                style="height: 350px; object-fit: cover; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                                style="height: 350px; object-fit: cover;">
                         @else
                             <div class="d-flex justify-content-center align-items-center"
-                                style="height: 300px; background-color: #f8f9fa; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+                                style="height: 350px; background-color: #858585;">
                                 <span class="text-muted">Brak zdjęcia</span>
                             </div>
                         @endif
-                        <div class="card-body d-flex flex-column">
+                        <div class="card-body d-flex flex-column" style="background-color: #ececec">
                             <h5 class="card-title text-center font-weight-bold">{{ $product->name }}</h5>
                             <p class="card-text text-muted">{{ Str::limit(strip_tags($product->description), 100) }}</p>
                             <div class="mt-auto text-center">

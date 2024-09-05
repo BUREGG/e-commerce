@@ -1,22 +1,97 @@
 body {
-    /* Example background gradient */
-    background: linear-gradient(to right, #f7f7f7, #e2e2e2);
+    background: linear-gradient(to right, #f9f9f9, #eaeaea);
+    font-family: 'Roboto', sans-serif; /* Nowoczesna czcionka */
+    transition: background 0.3s ease-in-out;
 }
+
 .card {
-    border-radius: 8px; /* Rounded corners for the cards */
+    border-radius: 12px;
+    overflow: hidden; /* Upewnia się, że obraz nie wykracza poza granice karty */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animacja przy najechaniu */
 }
+
+.card:hover {
+    transform: translateY(-10px); /* Efekt podniesienia karty */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Mocniejszy cień przy najechaniu */
+}
+
 .card-img-top {
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
+    border-top-left-radius: 0; /* Usuń dodatkowe zaokrąglenia, ponieważ teraz mamy overflow: hidden */
+    border-top-right-radius: 0;
+    transition: transform 0.5s ease; /* Animacja dla obrazka */
 }
+
+.card:hover .card-img-top {
+    transform: scale(1.05); /* Powiększenie obrazka przy najechaniu */
+}
+
 .card-body {
-    background-color: #fff; /* White background for card body */
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    transition: background-color 0.3s ease;
 }
+
+.card-title {
+    color: #333;
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.card-text {
+    font-size: 0.95rem;
+    color: #666;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+}
+
 .btn-primary {
-    background-color: #007bff; /* Bootstrap primary color */
+    background-color: #007bff;
     border-color: #007bff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
+
 .btn-primary:hover {
-    background-color: #0056b3; /* Darker shade for hover effect */
+    background-color: #0056b3;
     border-color: #004085;
+    box-shadow: 0 6px 12px rgba(0, 91, 179, 0.2); /* Dodanie cienia przy najechaniu */
 }
+
+.btn-warning {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-warning:hover {
+    background-color: #e0a800;
+    box-shadow: 0 6px 12px rgba(224, 168, 0, 0.2); /* Dodanie cienia przy najechaniu */
+}
+
+.btn-danger {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    box-shadow: 0 6px 12px rgba(200, 35, 51, 0.2); /* Dodanie cienia przy najechaniu */
+}
+
+/* Animacja przy wejściu na stronę */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
