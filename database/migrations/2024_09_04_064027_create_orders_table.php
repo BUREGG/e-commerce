@@ -15,9 +15,14 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('cart_id');
             $table->foreignId('created_by_user_id')->constrained('users')->onUpdate('cascade')->onDelete('restrict');
-            $table->tinyInteger('is_own_realisation')->default(0);
-            $table->string('status')->nullable();
             $table->timestamps();
+            $table->string('address');
+            $table->string('city');
+            $table->string('name');
+            $table->string('province');
+            $table->string('lastname');
+            $table->string('phone');
+            $table->string('email');
         });
     }
 

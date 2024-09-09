@@ -3,6 +3,7 @@
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CartPositionController;
 use App\Http\Controllers\InpostController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\PayController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
@@ -45,6 +46,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/delivery', [InpostController::class, 'show'])->name('inpost.show');
     Route::post('/save-point', [InpostController::class, 'store'])->name('inpost.store');
     Route::get('/pay', [PayController::class, 'show'])->name('pay.show');
+    Route::post('/save-order', [OrderController::class, 'store'])->name('order.store');
 });
 
 require __DIR__.'/auth.php';
