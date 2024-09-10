@@ -25,7 +25,7 @@
                     <a class="nav-link" href="{{ route('login') }}">Logowanie</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Rejestracja</a>
+                    <a class="nav-link" href="{{ route('register') }}">Rejestracja</a>
                 </li>
             @endguest
             @role('admin')

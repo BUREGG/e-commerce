@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('cart_id');
+            $table->integer('cart_in_realisation_id');
             $table->foreignId('created_by_user_id')->constrained('users')->onUpdate('cascade')->onDelete('restrict');
             $table->timestamps();
             $table->string('address');
