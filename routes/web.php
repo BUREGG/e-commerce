@@ -47,6 +47,7 @@ Route::middleware('auth')->group(function () {
     Route::post('/save-point', [InpostController::class, 'store'])->name('inpost.store');
     Route::get('/pay', [PayController::class, 'show'])->name('pay.show');
     Route::post('/save-order', [OrderController::class, 'store'])->name('order.store');
+    Route::get('/orders', [OrderController::class, 'show'])->name('order.show');
 });
 
 require __DIR__.'/auth.php';

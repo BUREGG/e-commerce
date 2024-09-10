@@ -20,4 +20,8 @@ class Order extends Model
     {
         return $this->belongsTo(Cart::class);
     }
+    public function cartInRealisation(): belongsTo
+    {
+        return $this->belongsTo(CartInRealisation::class);
+    }
 }

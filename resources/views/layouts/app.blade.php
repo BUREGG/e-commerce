@@ -43,6 +43,10 @@
                         <span class="badge bg-danger">{{ $cartCount }}</span>
                     @endif
                 </a>
+                <!-- Link do zamówień -->
+                <a class="nav-link ms-3" href="{{ route('order.show') }}">
+                    <i class="fas fa-box"></i> Zamówienia
+                </a>
                 <div class="logout-wrapper ms-3">
                     <span class="navbar-text me-2">
                         Zalogowany jako: {{ auth()->user()->name }}
