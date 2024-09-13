@@ -5,30 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}"> <!-- Jeśli używasz CSRF w Laravel -->
     <link rel="stylesheet" href="https://geowidget.inpost.pl/inpost-geowidget.css"/>
-    <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        .widget-container {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-
-        inpost-geowidget {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-    </style>
+    <link href="{{ asset('css/delivery.css') }}" rel="stylesheet">
     <script src='https://geowidget.inpost.pl/inpost-geowidget.js' defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {

@@ -60,7 +60,7 @@ class InpostController extends Controller
             $point->save();
         }
 
-        return response()->json(['success' => true]);
+        return redirect()->route('');
     }
 
 
